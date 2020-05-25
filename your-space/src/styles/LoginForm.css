@@ -1,0 +1,23 @@
+#email-address:before {
+content: "*";
+color: red;
+}
+
+#password:before {
+    content: "*";
+    color: red;
+}
+
+#required:before {
+    content: "*";
+    color: red;
+}
+
+#user-name:before {
+    content: "*";
+    color: red;
+}
+
+#sign-up-button {
+    text-align: center;
+}
