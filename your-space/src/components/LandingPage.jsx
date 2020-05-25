@@ -1,5 +1,9 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import LoginModal from './LoginModal';
+
 import '../styles/LandingPage.css';
+
 
 // import logo from '../../logo.svg';
 // import '../../App.css';
@@ -7,6 +11,10 @@ import '../styles/LandingPage.css';
 class LandingPage extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            modalShow: false,
+
+        }
         this.canvasRef = React.createRef();
     }
 
@@ -173,12 +181,21 @@ class LandingPage extends React.Component {
     }
 
     render() {
-        return (
-            <div className="App">
-                <canvas ref={this.canvasRef} id="canvas1" />
-                {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            </div>
 
+        return (
+            <React.Fragment>
+                <div className="container">
+                    <canvas ref={this.canvasRef} id="canvas1" />
+                    <Button variant="outline-light" className="modal-btn" id="welcome" onClick={() => this.setState({ modalShow: true })}>
+                        Welcome to YourSpace
+                    </Button>
+
+                    <LoginModal
+                        show={this.state.modalShow}
+                        onHide={() => this.setState({ modalShow: false })}
+                    />
+                </div>
+            </React.Fragment>
         );
     }
 }
