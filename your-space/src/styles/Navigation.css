@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sriracha&display=swap');
+
+#company-moto {
+    font-family: 'Righteous', cursive;
+    font-size: 1.3em;
+    color: orange;
+}
+
+.nav-items {
+    font-family: 'Righteous', cursive;
+    font-size: 1.3em;
+    padding-bottom: 9px;
+}
+
+.mr-auto {
+    padding-bottom: 9px;
+    margin: 0 190px auto;
+    color: white;
+}
+
+#collasible-nav-dropdown {
+  color:rgba(255,255,255,.5);
+}
+
+#collasible-nav-dropdown:hover {
+    color:rgba(255,255,255,.8);
+  }
