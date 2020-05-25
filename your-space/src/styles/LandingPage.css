@@ -1,7 +1,12 @@
-#canvas1 {
+.container {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+    width: 100%;
+    height: 100%;
+}
+
+#canvas1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,4 +18,17 @@
     /* background: rgb(0,0,0); */
     /* background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(219,219,219,1) 50%); */
     /* background-color: #2A2738; */
+}
+
+.modal-btn {
+    position: absolute;
+    top: 50vh;
+    left: 43vw;
+    /* right: 50vw;
+    padding: 0; */
+
+}
+
+#welcome:hover {
+    background-color: orange;
 }
