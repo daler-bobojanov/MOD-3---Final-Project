@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import LoginModal from './LoginModal';
+import { Link } from 'react-router-dom';
 
 import '../styles/LandingPage.css';
 
@@ -186,10 +187,11 @@ class LandingPage extends React.Component {
             <React.Fragment>
                 <div className="container">
                     <canvas ref={this.canvasRef} id="canvas1" />
-                    <Button variant="outline-light" className="modal-btn" id="welcome" onClick={() => this.setState({ modalShow: true })}>
-                        Welcome to YourSpace
+                    <Link to="/home">
+                        <Button tag={Link} to={"/home"} variant="outline-light" className="modal-btn" id="welcome" onClick={() => this.setState({ modalShow: true })}>
+                            Welcome to YourSpace
                     </Button>
-
+                    </Link>
                     <LoginModal
                         show={this.state.modalShow}
                         onHide={() => this.setState({ modalShow: false })}
