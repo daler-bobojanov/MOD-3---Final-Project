@@ -1,9 +1,13 @@
 import React from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import fire from './config/Fire';
 import './App.css';
 
 import LandingPage from './components/LandingPage';
 import Home from './components/Home';
+import DocumentList from './components/DocumentList';
+import Navigation from './components/Navigation';
+import DocumentEdit from './components/DocumentEdit';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +28,7 @@ class App extends React.Component {
       if (user) {
         this.setState({ user: { user }, displayName: user.displayName });
         localStorage.setItem('user', user.uid);
-        console.log(user);
+        // console.log(user);
 
       } else {
         this.setState({ user: null });
@@ -35,9 +39,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="">
-        {this.state.user ? (<Home userDisplayName={this.state.displayName} />) : (<LandingPage />)}
-      </div>
+      <React.Fragment>
+        <Router>
+          <Switch>
+            {/* {this.state.user ? (<Home userDisplayName={this.state.displayName} />) : (<LandingPage />)} */}
+
+            {this.state.user ? (
+              <Route path='/navigation' exact={true} component={Navigation} />) : (<LandingPage />)}
+
+            <Route path='/home' exact={true}
+              render={(props) => <Home  {...props} userDisplayName={this.state.displayName} />}
+            />
+            <Route path='/documents' exact={true} component={DocumentList} />
+            <Route path='/documents/:id' exact={true} component={DocumentEdit} />
+            <Route path='/' exact={true} component={LandingPage} />
+
+          </Switch>
+        </Router>
+      </React.Fragment>
     );
   }
 }
