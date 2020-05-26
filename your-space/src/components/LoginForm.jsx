@@ -61,12 +61,12 @@ class LoginForm extends React.Component {
                     <form>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1" id="email-address">Email address</label>
-                            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" className="form-control" aria-describedby="emailHelp" placeholder="Enter valid email" />
+                            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email-input" className="form-control" aria-describedby="emailHelp" placeholder="Enter valid email" />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="exampleInputPassword1" id="password">Password</label>
-                            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="examplePassword1" className="form-control" placeholder="Password" />
+                            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="password-input" className="form-control" placeholder="Password" />
                             <small id="required" className="form-text text-muted">Mandatory fields</small>
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email or password with anyone.</small>
                         </div>
@@ -75,7 +75,7 @@ class LoginForm extends React.Component {
                         <hr />
                     </form>
 
-                    <form id="sign-up-button">
+                    <form id="sign-up-form-button">
                         <small>Don't have an account?</small>
                         <Button variant="link" size="lg" onClick={this.displaySignUp}>Sign up</Button>
                     </form>
