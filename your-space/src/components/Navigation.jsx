@@ -1,58 +1,54 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo.png';
 import fire from '../config/Fire';
 import '../styles/Navigation.css';
+// import DocumentList from './DocumentList';
+// import Home from './Home';
 
 const Navigation = () => {
 
     function logout() {
         fire.auth().signOut();
+        localStorage.clear();
+        sessionStorage.clear();
     }
 
     return (
         <React.Fragment>
-            {/* 
-            <Navbar bg="dark" variant="dark" expand="lg" style={{ width: '100vw', margin: '0' }}>
-                <Navbar.Brand href="#home">
-                    <img
-                        alt="logo"
-                        src={Logo}
-                        width="30%"
-                        height="30%"
-                        className="d-inline-block align-top"
-                    />
-      React Bootstrap
-    </Navbar.Brand>
-            </Navbar>
-            <button onClick={logout}>Logout</button>
-             */}
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#home" style={{ margin: '0' }}>
-                    <img
-                        alt="logo"
-                        src={Logo}
-                        width="25%"
-                        height="25%"
-                        className="d-inline-block align-center"
 
-                    />
-                    <span id="company-moto">One space for all your needs</span>
-                </Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Link to="/home">
+                    <Navbar.Brand style={{ margin: '0' }} tag={Link} to="/home" >
+                        <img
+                            alt="logo"
+                            src={Logo}
+                            width="25%"
+                            height="25%"
+                            className="d-inline-block align-center"
+                        />
+                        <span id="company-moto">One space for all your needs</span>
+                    </Navbar.Brand>
+                </Link>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto nav-items">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        {/* <Link to="/documents"> */}
+                        <Nav.Link href="/documents/#documentlist" tag={Link} to="/documents">All documents</Nav.Link>
+                        {/* </Link> */}
+                        <Nav.Link href="#pricing">My To-Do</Nav.Link>
                     </Nav>
                     <NavDropdown title="Your account" className="nav-items" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item onClick={logout}>Sing-out</NavDropdown.Item>
+                        <Link to="/landing-page">
+                            <NavDropdown.Item tag={Link} to="/" onClick={logout}>Sing-out</NavDropdown.Item>
+                        </Link>
                     </NavDropdown>
                     {/* <Nav>
                         <Nav.Link href="#deets">More deets</Nav.Link>
