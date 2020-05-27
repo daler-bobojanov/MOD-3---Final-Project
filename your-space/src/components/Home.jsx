@@ -1,24 +1,24 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import Navigation from './Navigation';
-// import { Link } from 'react-router-dom';
+import '../styles/Home.css';
 
 
 const Home = (props) => {
     return (
         <div className="">
             <Navigation />
-            <Card border="dark" style={{ width: '80%', margin: '60px auto' }}>
-                <Card.Header style={{ textAlign: 'center' }}><h2>Welcome {props.userDisplayName}</h2></Card.Header>
+            <Card border="warning" style={{ width: '80%', margin: '60px auto' }}>
+                <Card.Header style={{ textAlign: 'center' }}><h1 className="user-greeting">Welcome {props.userDisplayName}</h1></Card.Header>
                 <Card.Body>
-                    <Card.Title>Dark Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio cumque neque dolor sint asperiores magni tempore voluptas, velit architecto ut sed voluptates libero at debitis perspiciatis? Culpa eos sapiente voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cumque voluptas neque hic, odit eius praesentium incidunt. Aperiam, sit vitae fugiat perferendis consequatur architecto quae ducimus voluptates enim dolores ab. Culpa quisquam nostrum autem velit harum quasi officia, necessitatibus pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt repudiandae accusamus voluptas saepe ipsum vero sed alias. Fuga animi molestias libero eos, fugiat corrupti vitae ab assumenda? Neque nisi veniam cupiditate, possimus reprehenderit illum, nulla provident voluptate temporibus quaerat minima? Placeat esse dicta numquam ex corrupti, vel sit explicabo fugiat aliquam perferendis a unde necessitatibus autem dolore sint dignissimos laborum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam molestias fugit aspernatur, eaque amet consequatur libero beatae tempora minus non pariatur esse quidem dolore saepe temporibus dolorum harum ipsum suscipit eius vitae quia eveniet! Sint commodi, accusantium ratione ipsa possimus voluptatibus rem nam aliquid maxime aut exercitationem a reprehenderit aliquam recusandae quae? Est quos rem accusamus, similique animi sint quod. Quo aut odit doloribus, illo dicta vel, eum libero ducimus sed explicabo quidem, eaque ullam animi ea perspiciatis nihil totam.
-            </Card.Text>
+                    <Card.Title className="user-greeting">About Us</Card.Title>
+                    <Card.Text className="user-greeting">
+                        
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptas rem non recusandae ut ratione omnis quia esse molestiae itaque, voluptates eius, laboriosam aliquid? Nam odit itaque velit sint eligendi, iure dolores sequi obcaecati, sit placeat mollitia nemo doloribus amet quasi esse delectus minus. Eligendi mollitia est necessitatibus, enim iusto impedit voluptate! Corrupti inventore ipsa, veniam neque esse quaerat ducimus, dolore amet reprehenderit quasi repellendus unde modi in harum tempora vero tempore nihil nesciunt atque consequatur voluptatem enim consectetur reiciendis. Saepe vitae laborum soluta voluptatibus tenetur, repellat dolores ab iste pariatur, minus, minima nihil quas ipsa nulla quibusdam. Consequatur hic, voluptatibus corrupti voluptates perspiciatis harum minima sint ratione est quia recusandae quas eveniet voluptatem totam reiciendis fugiat. Nemo obcaecati blanditiis veniam nesciunt ipsa nisi distinctio laboriosam beatae minus provident, repellat quos quae accusamus enim eveniet dicta totam? Quas sed ab id earum optio modi dolor fugit eveniet omnis, iure repellendus. Rem et nam architecto provident facilis, molestiae consequatur eum reprehenderit! Quos alias maiores quod culpa, iusto qui veritatis, tenetur perferendis iure et, rerum sunt necessitatibus molestias! Excepturi assumenda harum sint maxime hic repudiandae! Esse est veritatis laboriosam dignissimos assumenda blanditiis consectetur, vitae perferendis ea deleniti molestiae facere natus quidem quo corrupti architecto incidunt odit dolor iure asperiores repudiandae omnis adipisci ipsam cumque!
+                        
+                    </Card.Text>
                 </Card.Body>
             </Card>
-
         </div>
     );
 }
