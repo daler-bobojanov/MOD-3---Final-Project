@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-// import { Button, Container, Form, FormGroup, Input, label } from 'reactstrap';
 import { Container, Form, FormGroup, Button } from 'react-bootstrap';
 import Navigation from './Navigation';
 
@@ -51,6 +50,7 @@ class DocumentEdit extends Component {
             },
             body: JSON.stringify(item),
         });
+        // What it does is it pushes a new entry into the history stack - aka redirecting the user to another route.
         this.props.history.push('/documents');
     }
 
@@ -95,7 +95,6 @@ class DocumentEdit extends Component {
                             <Button variant="secondary" tag={Link} to="/documents">Cancel</Button>
                         </Link>
                     </FormGroup>
-
                 </Form>
             </Container>
         </div>
