@@ -31,7 +31,7 @@ const Navigation = () => {
                         <span id="company-moto">One space for all your needs</span>
                     </Navbar.Brand>
                 </Link>
-
+                <p></p>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -39,16 +39,17 @@ const Navigation = () => {
                         {/* <Link to="/documents"> */}
                         <Nav.Link href="/documents/#documentlist" tag={Link} to="/documents">All documents</Nav.Link>
                         {/* </Link> */}
-                        <Nav.Link href="#pricing">My To-Do</Nav.Link>
+                        <Nav.Link href="">My To-Do</Nav.Link>
                     </Nav>
                     <NavDropdown title="Your account" className="nav-items" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item> */}
+                        {/* <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item> */}
+                        {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
                         <NavDropdown.Divider />
                         <Link to="/landing-page">
                             <NavDropdown.Item tag={Link} to="/" onClick={logout}>Sing-out</NavDropdown.Item>
                         </Link>
+                        <NavDropdown.Divider />
                     </NavDropdown>
                     {/* <Nav>
                         <Nav.Link href="#deets">More deets</Nav.Link>
