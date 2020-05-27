@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Spinner, Button, ButtonGroup, Container } from 'react-bootstrap';
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 import Navigation from './Navigation';
 import ConfirmDeleteModal from './ConfirmDeleteModal';
 
@@ -69,8 +70,8 @@ class DocumentList extends React.Component {
                     {/* <br /> */}
                     <Card.Subtitle className="mb-1 text-muted">Last Updated: {updateDate} (Eastern Daylight Time)</Card.Subtitle>
                     <hr />
-                    <Card.Text>
-                        <h4>{document.description}</h4>
+                    <Card.Text style={{ fontSize: '1.5em' }}>
+                        {document.description}
                     </Card.Text>
                     <ButtonGroup>
                         <Link to={"/documents/" + document.id}>
@@ -78,27 +79,19 @@ class DocumentList extends React.Component {
                         </Link>
                         {/* <Button size="sm" variant="danger" onClick={() => this.remove(document.id)}>Delete</Button> */}
                         <Button size="sm" variant="danger" onClick={this.showModal}>Delete</Button>
-
                     </ButtonGroup>
                     <ConfirmDeleteModal
                         show={this.state.modalShow}
-                        onHide={() => this.setState({ modalShow: false })}
-                        deleteYes={() => this.remove(document.id)}
+                        abort={() => this.setState({ modalShow: false })}
+                        confirm={() => this.remove(document.id)}
                     />
-                    {/* <ButtonGroup>
-                    </ButtonGroup> */}
-
-                    {/* <Card.Link href={"/document/" + document.id} tag={Link}>Document Details</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link> */}
                 </Card.Body>
-
             </Card>
         });
 
         return (
             <div>
                 <Navigation />
-
                 <Container fluid style={{ textAlign: 'start', margin: '20px auto', width: '90%' }}>
                     <div className="float-right">
                         <Link to={"/documents/new"}>
@@ -107,9 +100,8 @@ class DocumentList extends React.Component {
                     </div>
                     <h3 id="documentlist">Documents List</h3>
                 </Container>
-
-                {/* This is All Documents list component */}
                 {documentList}
+                <ScrollUpButton />
             </div>
         );
     }
