@@ -12,19 +12,20 @@ const ConfirmDeleteModal = (props) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    Are you sure you want to delete?
-        </Modal.Title>
+                    <h5>Are you sure you want to delete this record?</h5>
+                </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <h4>Confirm your selection</h4>
-                <p>This action can not be undone.</p>
+                <p><span>&#9888;</span>This action can not be undone</p>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.deleteYes} variant="danger" size="lg">Yes</Button>
-                <Button onClick={props.onHide} size="lg">No</Button>
+                <Button onClick={props.confirm} variant="danger" size="lg" style={{ width: '20%', margin: '0 auto' }}>Yes</Button>
+                <Button onClick={props.abort} size="lg" style={{ width: '20%', margin: '0 auto' }}>No</Button>
             </Modal.Footer>
         </Modal>
     );
 }
 
 export default ConfirmDeleteModal;
+
