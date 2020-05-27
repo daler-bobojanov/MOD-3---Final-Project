@@ -20,9 +20,9 @@ Project Contributor(s):
 - Organizations and HR/training managers who need a centralized digital space to create/maintain training materials for use by their personnel.
 
 ## *Wireframe:*
-<!-- ![0. LandingPage](https://github.com/daler-bobojanov/MOD3-MidMODGroupProject/blob/Daler/wireframe/image1.png) -->
+![0. LandingPage](https://github.com/daler-bobojanov/MOD-3---Final-Project/blob/master/wireframe/LandingPage__yourSpaceApp.png)
 ==================
-<!-- ![1. Navbar(Menu)](https://github.com/daler-bobojanov/MOD3-MidMODGroupProject/blob/Daler/wireframe/image2.png) -->
+![1. HomePage(Menu)](https://github.com/daler-bobojanov/MOD-3---Final-Project/blob/master/wireframe/HomePage__yourSpaceApp.png)
 
 
 
