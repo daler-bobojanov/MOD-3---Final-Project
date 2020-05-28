@@ -8,6 +8,8 @@ import Home from './components/Home';
 import DocumentList from './components/DocumentList';
 import Navigation from './components/Navigation';
 import DocumentEdit from './components/DocumentEdit';
+import MyToDo from './components/MyToDo';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -52,6 +54,7 @@ class App extends React.Component {
             />
             <Route path='/documents' exact={true} component={DocumentList} />
             <Route path='/documents/:id' exact={true} component={DocumentEdit} />
+            <Route path='/my-to-do' exact={true} component={MyToDo} />
             <Route path='/' exact={true} component={LandingPage} />
 
           </Switch>
