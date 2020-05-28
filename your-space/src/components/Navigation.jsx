@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo.png';
 import fire from '../config/Fire';
 import '../styles/Navigation.css';
-// import DocumentList from './DocumentList';
-// import Home from './Home';
+
 
 const Navigation = () => {
 
@@ -39,7 +38,7 @@ const Navigation = () => {
                         {/* <Link to="/documents"> */}
                         <Nav.Link href="/documents/#documentlist" tag={Link} to="/documents">All documents</Nav.Link>
                         {/* </Link> */}
-                        <Nav.Link href="">My To-Do</Nav.Link>
+                        <Nav.Link href="/my-to-do/#todos" tag={Link}>My To-Do</Nav.Link>
                     </Nav>
                     <NavDropdown title="Your account" className="nav-items" id="collasible-nav-dropdown">
                         {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item> */}
