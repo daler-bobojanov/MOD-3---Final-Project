@@ -9,9 +9,9 @@ Project Contributor(s):
 <!-- [https://eat-read-hunt.surge.sh/](https://eat-read-hunt.surge.sh/) -->
 - *Placeholder* 
 
-## *Which 3rd party API's we used?*
-<!-- - https://jobs.github.com/api; -->
-- *Placeholder*
+## *Which 3rd party API's I used?*
+- "https://type.fit/api/quotes"; - inspirational quotes
+
 
 ## *Problem statement (which problem we tried to solve?)*
 * This app helps organizations and department managers to create documents/training material for their teams and maintain its lifecycle. It also incorporates personalized "DAILY TO-DO" functionality to help you keep track of your progress to achieve your desired goals. Each session is secured by user authentication. 
