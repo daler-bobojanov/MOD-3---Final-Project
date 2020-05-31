@@ -3,3 +3,12 @@
 .user-greeting {
     font-family: 'Righteous', cursive;    
 }
+
+.about {
+    font-family: 'Righteous', cursive;    
+    font-size: 1.3em;
+    /* padding-top: 10px;  */
+    /* padding-bottom: 10px;    */
+    line-height: 34px;    
+    text-align: center;
+}
