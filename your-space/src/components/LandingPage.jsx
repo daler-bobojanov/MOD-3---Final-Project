@@ -2,12 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import LoginModal from './LoginModal';
 import { Link } from 'react-router-dom';
-
 import '../styles/LandingPage.css';
-
-
-// import logo from '../../logo.svg';
-// import '../../App.css';
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -182,7 +177,6 @@ class LandingPage extends React.Component {
     }
 
     render() {
-
         return (
             <React.Fragment>
                 <div className="container">
