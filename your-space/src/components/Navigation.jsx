@@ -16,7 +16,6 @@ const Navigation = () => {
 
     return (
         <React.Fragment>
-
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Link to="/home">
                     <Navbar.Brand style={{ margin: '0' }} tag={Link} to="/home" >
@@ -58,7 +57,6 @@ const Navigation = () => {
                     </Nav> */}
                 </Navbar.Collapse>
             </Navbar>
-
         </React.Fragment>
     );
 }
