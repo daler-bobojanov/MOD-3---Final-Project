@@ -10,7 +10,7 @@ const ConfirmDeleteModal = (props) => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <Modal.Header closeButton>
+            <Modal.Header closeButton onClick={props.abort}>
                 <Modal.Title id="contained-modal-title-vcenter">
                     <h5>Are you sure you want to delete this record?</h5>
                 </Modal.Title>
