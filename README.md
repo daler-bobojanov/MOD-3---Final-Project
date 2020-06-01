@@ -6,11 +6,11 @@ Project Contributor(s):
 
 
 ## Publicly Deployed Website:
-[Welcome-To-Your-Space](www.welcome-to-your-space.herokuapp.com/)
+[Welcome-To-Your-Space](http://welcome-to-your-space.herokuapp.com/)
 
 
 ## *Which 3rd party API's I used?*
-- "https://type.fit/api/quotes"; - inspirational quotes
+- "https://type.fit/api/quotes" - inspirational quotes
 
 
 ## *Problem statement (which problem we tried to solve?)*
