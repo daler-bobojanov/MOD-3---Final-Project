@@ -55,7 +55,7 @@ class App extends React.Component {
             <Route path='/documents' exact={true} component={DocumentList} />
             <Route path='/documents/:id' exact={true} component={DocumentEdit} />
             <Route path='/my-to-do' exact={true} component={MyToDo} />
-            <Route path='/' exact={true} component={LandingPage} />
+            <Route path='/landing-page' exact={true} component={LandingPage} />
 
           </Switch>
         </Router>

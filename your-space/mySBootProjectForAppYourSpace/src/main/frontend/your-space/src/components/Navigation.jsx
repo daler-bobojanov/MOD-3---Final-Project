@@ -34,10 +34,12 @@ const Navigation = () => {
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto nav-items">
-                        {/* <Link to="/documents"> */}
-                        <Nav.Link href="/documents/#documentlist" tag={Link} to="/documents">All documents</Nav.Link>
-                        {/* </Link> */}
-                        <Nav.Link href="/my-to-do/#todos" tag={Link}>My To-Do</Nav.Link>
+                        <Link to="/documents">
+                            <Nav.Link href="/documents/#documentlist" tag={Link} to="/documents">All documents</Nav.Link>
+                        </Link>
+                        <Link to="/my-to-do">
+                            <Nav.Link href="/my-to-do/#todos" tag={Link}>My To-Do</Nav.Link>
+                        </Link>
                     </Nav>
                     <NavDropdown title="Your account" className="nav-items" id="collasible-nav-dropdown">
                         {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item> */}
@@ -45,7 +47,7 @@ const Navigation = () => {
                         {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
                         <NavDropdown.Divider />
                         <Link to="/landing-page">
-                            <NavDropdown.Item tag={Link} to="/" onClick={logout}>Sing-out</NavDropdown.Item>
+                            <NavDropdown.Item tag={Link} to="/landing-page" onClick={logout}>Sing-out</NavDropdown.Item>
                         </Link>
                         <NavDropdown.Divider />
                     </NavDropdown>
