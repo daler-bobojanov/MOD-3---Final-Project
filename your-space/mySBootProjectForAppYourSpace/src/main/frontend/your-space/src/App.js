@@ -42,7 +42,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
+        <Router basename={process.env.REACT_APP_ROUTER_BASE || ''}>
           <Switch>
             {/* {this.state.user ? (<Home userDisplayName={this.state.displayName} />) : (<LandingPage />)} */}
 
